@@ -36,8 +36,11 @@ class ViewController: UIViewController {
             }
         sender.setImage(image, forState: .Normal)
             
-            if gameState[0] != 0 && gameState[0] == gameState[1] && gameState[1] == gameState[2] {
+            for combination in winningCombinations {
+            
+            if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
                 print("Winnar")
+                }
             }
         }
     }
